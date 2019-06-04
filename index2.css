@@ -1,0 +1,23 @@
+html{
+    padding: 50px;
+}
+body{
+    background-color: darkblue;
+}
+div#header{
+    padding: 10px;
+    border: 10px dotted red;
+    color: black;
+    font-size: 20;
+}
+div#content{
+    font-family: "Comic Sans MS";
+    color: purple;
+}
+p#onpage{
+    font-size: 20;
+    font-weight: 100;
+    background-color: white;
+    width: 200px;
+    border: 5px solid red;
+}
