@@ -1,0 +1,25 @@
+body h1{
+    font-weight: 900;
+    background-color: darkblue;
+    color: red;
+}
+
+body{
+    background-color: lightblue;
+}
+
+table.table1{
+    background-color: hotpink;
+    border: 3px solid black;
+    font-size: 30px;
+}
+
+table.table1 th{
+    background-color: yellow;
+    border: 3px solid black;
+    padding: 5px;
+}
+table.table1 td{
+    padding: 10px;
+    border-right: 1px solid black;
+}

@@ -13,7 +13,7 @@ const multiply2 = () => {
     // debugger;
     let val = multiply1(num1, num2);
     console.log(val);
-    let val2 = document.createElement("p")
+    let val2 = document.createElement("p");
     val2.innerHTML = val;
     document.body.appendChild(val2);
 }

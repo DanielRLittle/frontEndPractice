@@ -2,13 +2,14 @@ html{
     padding: 50px;
 }
 body{
-    background-color: darkblue;
+    background-color: lightyellow;
 }
 div#header{
     padding: 10px;
     border: 10px dotted red;
     color: black;
     font-size: 20;
+    font-family: "Comic Sans MS"
 }
 div#content{
     font-family: "Comic Sans MS";
@@ -20,4 +21,8 @@ p#onpage{
     background-color: white;
     width: 200px;
     border: 5px solid red;
+}
+p#hello{
+    color: red;
+    font-weight: 900;
 }
