@@ -1,0 +1,14 @@
+body.pad{
+    background-color: dodgerblue;
+    padding: 50px;
+}
+.bmaker th{
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 40;
+}
+.bmaker td{
+    border: 2px solid black;
+    padding: 20px;
+    font-size: 35;
+}

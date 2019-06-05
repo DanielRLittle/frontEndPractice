@@ -11,7 +11,7 @@ function fetchData(url) {
         req2.onreadystatechange = () => {
             if (req2.readyState === 4) {
                 if (req2.status === 200) {
-                    console.log("Yo bredda, it worked!")
+                    console.log("Yo bredda, it worked!");
                     resolve(req2);
                 }
                 else {
@@ -21,7 +21,7 @@ function fetchData(url) {
         }
         req2.open("GET", url);
         req2.send();
-    })
+    });
 }
 
 function requestyRoi(request) {
