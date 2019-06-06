@@ -6,6 +6,7 @@ function requestyToy(url) {
                 if (req.status === 200) {
                     console.log("got the stuff!");
                     resolve(req);
+                    
                 }
                 else {
                     reject("could not find data!")
@@ -27,6 +28,7 @@ function sendyPloy(data, url) {
                 if (req.status === 201) {
                     console.log("Sent the stuff!");
                     resolve(req);
+                    
                 }
                 else {
                     reject("Where were you mate?!");
@@ -45,12 +47,38 @@ function displayeeMoi(request) {
     }
 }
 
-requestyToy("http://localhost:8080/JavaEEServer-1.0/api/accounts/").then((x) => {
+function displayConsole() {
+    requestyToy("http://localhost:8080/JavaEEServer-1.0/api/accounts/").then((x) => {
     displayeeMoi(x);
 });
+}
+
+displayConsole();
 
 function transferPageyEnvoy() {
-    let account = new Account(document.getElementById("inputtyfoi").value);
-    console.log(account);
-    sendyPloy(account, "http://localhost:8080/JavaEEServer-1.0/api/accounts/");
+    let input = document.getElementById("inputtyfoi").value;
+    if (input !== "") {
+        let account = new Account(document.getElementById("inputtyfoi").value);
+        console.log(account);
+        sendyPloy(account, "http://localhost:8080/JavaEEServer-1.0/api/accounts/");
+        document.getElementById("error").innerHTML = "Account added!";
+    }
+    else {
+        console.log("Can't send a blank name!");
+        document.getElementById("error").innerHTML = "Error! Please enter a name.";
+    }
+}
+
+function newPage() {
+    
+    let input = document.getElementById("inputtyfoi").value;
+    requestyToy("http://localhost:8080/JavaEEServer-1.0/api/accounts/").then((x) => {
+        let data = JSON.parse(x.responseText);
+        for(let x of data) {
+            if(x.name === input) {
+                window.sessionStorage.setItem("User", JSON.stringify(x));
+                window.location.href = 'file:///C:/Users/Admin/Desktop/frontEndPractice/newAccountPage.html';
+            }
+        }
+    });
 }
